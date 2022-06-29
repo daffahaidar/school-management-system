@@ -108,11 +108,11 @@
                     </a>
                     <ul class="dropdown-menu animated flipInX">
                         <li class="user-body">
-                            <a class="dropdown-item" href="#"><i class="ti-user text-muted mr-2"></i> Profile</a>
-                            <a class="dropdown-item" href="#"><i class="ti-wallet text-muted mr-2"></i> My Wallet</a>
-                            <a class="dropdown-item" href="#"><i class="ti-settings text-muted mr-2"></i> Settings</a>
+                            <a class="dropdown-item" href="#"><i class="ti-user text-muted mr-2"></i> Profil</a>
+                            <a class="dropdown-item" href="#"><i class="ti-wallet text-muted mr-2"></i> Dompet</a>
+                            <a class="dropdown-item" href="#"><i class="ti-settings text-muted mr-2"></i> Pengaturan</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#"><i class="ti-lock text-muted mr-2"></i> Logout</a>
+                            <a class="dropdown-item" href="{{ route('admin.logout') }}"><i class="ti-lock text-muted mr-2"></i> Keluar</a>
                         </li>
                     </ul>
                 </li>

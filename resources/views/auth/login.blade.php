@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../images/favicon.ico">
+    <link rel="icon" href="{{ asset('backend/images/favicon.ico') }}">
 
     <title>Your Brand - Masuk </title>
 
@@ -42,7 +42,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text bg-transparent text-white"><i class="ti-email"></i></span>
                                         </div>
-                                        <input type="email" id="email" name="email" class="form-control pl-15 bg-transparent text-white plc-white" placeholder="Email">
+                                        <input type="email" id="email" name="email" class="form-control pl-15 bg-transparent text-white plc-white" placeholder="Email" :value="old('email')" required autofocus>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -50,13 +50,13 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text  bg-transparent text-white"><i class="ti-lock"></i></span>
                                         </div>
-                                        <input type="password" id="password" name="password" class="form-control pl-15 bg-transparent text-white plc-white" placeholder="Kata Sandi">
+                                        <input type="password" id="password" name="password" class="form-control pl-15 bg-transparent text-white plc-white" placeholder="Kata Sandi" required autocomplete="current-password">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="checkbox text-white">
-                                            <input type="checkbox" id="basic_checkbox_1">
+                                            <input name="remember" type="checkbox" id="basic_checkbox_1">
                                             <label for="basic_checkbox_1">Ingat Saya</label>
                                         </div>
                                     </div>

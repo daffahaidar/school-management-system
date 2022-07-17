@@ -27,14 +27,14 @@
             <li class="treeview">
                 <a href="#">
                     <i data-feather="message-circle"></i>
-                    <span>Application</span>
+                    <span>Kelola Pengguna</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-right pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="chat.html"><i class="ti-more"></i>Chat</a></li>
-                    <li><a href="calendar.html"><i class="ti-more"></i>Calendar</a></li>
+                    <li><a href="{{ route('user.view') }}"><i class="ti-more"></i>Lihat Pengguna</a></li>
+                    <li><a href="calendar.html"><i class="ti-more"></i>Tambah Pengguna</a></li>
                 </ul>
             </li>
 

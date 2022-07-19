@@ -20,40 +20,40 @@
                             <h3 class="box-title">Daftar Pengguna</h3>
                             <a href="" style="float: right;" class="btn btn-rounded btn-success mb-5"> Tambahkan Pengguna</a>
                         </div>
+
                         <!-- /.box-header -->
                         <div class="box-body">
                             <div class="table-responsive">
                                 <table id="example1" class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
-                                            <th>Nama</th>
+                                            <th width="5%">No</th>
                                             <th>Posisi</th>
-                                            <th>Kantor</th>
-                                            <th>Umur</th>
-                                            <th>Mulai Bekerja</th>
-                                            <th>Gaji</th>
+                                            <th>Nama</th>
+                                            <th>Email</th>
+                                            <th width="25%">Tindakan</th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach($allData as $key => $user)
                                         <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
+                                            <td>{{ $key+1 }}</td>
+                                            <td>{{ $user->usertype }}</td>
+                                            <td>{{ $user->name }}</td>
+                                            <td>{{ $user->email }}</td>
+                                            <td>
+                                                <a href="" class="btn btn-info">Ubah</a>
+                                                <a href="" class="btn btn-danger">Hapus</a>
+
+                                            </td>
+
                                         </tr>
+                                        @endforeach
 
                                     </tbody>
                                     <tfoot>
-                                        <tr>
-                                            <th>Nama</th>
-                                            <th>Posisi</th>
-                                            <th>Kantor</th>
-                                            <th>Umur</th>
-                                            <th>Mulai Bekerja</th>
-                                            <th>Gaji</th>
-                                        </tr>
+
                                     </tfoot>
                                 </table>
                             </div>

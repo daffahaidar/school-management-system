@@ -18,7 +18,7 @@
                     <div class="box">
                         <div class="box-header with-border">
                             <h3 class="box-title">Daftar Pengguna</h3>
-                            <a href="" style="float: right;" class="btn btn-rounded btn-success mb-5"> Tambahkan Pengguna</a>
+                            <a href="{{ route('users.add') }}" style="float: right;" class="btn btn-rounded btn-success mb-5"> Tambahkan Pengguna</a>
                         </div>
 
                         <!-- /.box-header -->
@@ -28,7 +28,7 @@
                                     <thead>
                                         <tr>
                                             <th width="5%">No</th>
-                                            <th>Posisi</th>
+                                            <th>Hak Akses</th>
                                             <th>Nama</th>
                                             <th>Email</th>
                                             <th width="25%">Tindakan</th>

@@ -6,7 +6,7 @@
 
 -   HTML 5
 -   CSS
--   SASS
+-   SCSS
 -   PHP
 -   Javascript
 -   JQuery
@@ -16,21 +16,23 @@
 
 ## Road Map
 
-| Date             | Progress                          |
-| :--------------- | :-------------------------------- |
-| **27 June 2022** | Installing Laravel 9 Framework    |
-| **28 June 2022** | Installing Laravel Authentication |
-| **28 June 2022** | Create Database and Migration     |
-| **29 June 2022** | Customize Admin Dashboard         |
-| **29 June 2022** | Dashboard Page Segmentation       |
-| **29 June 2022** | Create Users Logout System        |
-| **29 June 2022** | Customize Login Form              |
-| **30 June 2022** | Customize Register Form           |
-| **30 June 2022** | Customize Forgot Password Form    |
-| **1 July 2022**  | Reduction Admin Template          |
-| **17 July 2022** | Users Management Stage 1          |
-| **18 July 2022** | Users Management Stage 2          |
-| **Next...**      | coming soon...                    |
+| Date             | Progress                                  |
+| :--------------- | :---------------------------------------- |
+| **27 June 2022** | Installing Laravel 9 Framework            |
+| **28 June 2022** | Installing Laravel Authentication         |
+| **28 June 2022** | Create Database and Migration             |
+| **29 June 2022** | Customize Admin Dashboard                 |
+| **29 June 2022** | Dashboard Page Segmentation               |
+| **29 June 2022** | Create Users Logout System                |
+| **29 June 2022** | Customize Login Form                      |
+| **30 June 2022** | Customize Register Form                   |
+| **30 June 2022** | Customize Forgot Password Form            |
+| **1 July 2022**  | Reduction Admin Template                  |
+| **17 July 2022** | Users Management Stage 1                  |
+| **18 July 2022** | Users Management Stage 2                  |
+| **19 July 2022** | Fetch and Display User Data From Database |
+| **20 July 2022** | Insert User into Database Stage 1         |
+| **Next...**      | coming soon...                            |
 
 ## Authors
 

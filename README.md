@@ -31,7 +31,7 @@
 | **17 July 2022** | Users Management Stage 1                  |
 | **18 July 2022** | Users Management Stage 2                  |
 | **19 July 2022** | Fetch and Display User Data From Database |
-| **20 July 2022** | Insert User into Database Stage 1         |
+| **20 July 2022** | Insert User Data into Database            |
 | **Next...**      | coming soon...                            |
 
 ## Authors

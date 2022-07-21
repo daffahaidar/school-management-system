@@ -33,6 +33,7 @@
 | **19 July 2022** | Fetch and Display User Data From Database |
 | **20 July 2022** | Insert User Data into Database            |
 | **21 July 2022** | Edit and Update User Data in Database     |
+| **21 July 2022** | Delete User Data from Database            |
 | **Next...**      | coming soon...                            |
 
 ## Authors

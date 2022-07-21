@@ -66,4 +66,17 @@ class UserController extends Controller
 
         return redirect()->route('user.view')->with($notification);
     }
+
+    public function UserDelete($id)
+    {
+        $user = User::find($id);
+        $user->delete();
+
+        $notification = array(
+            'message' => 'Pengguna Berhasil Dihapus!',
+            'alert-type' => 'error'
+        );
+
+        return redirect()->route('user.view')->with($notification);
+    }
 }

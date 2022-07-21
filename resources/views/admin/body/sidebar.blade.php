@@ -18,7 +18,7 @@
         <ul class="sidebar-menu" data-widget="tree">
 
             <li>
-                <a href="index.html">
+                <a href="#">
                     <i data-feather="pie-chart"></i>
                     <span>Dashboard</span>
                 </a>

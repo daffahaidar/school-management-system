@@ -27,7 +27,7 @@
                                 <table id="example1" class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
-                                            <th width="5%">No</th>
+                                            <th width="5%">No.</th>
                                             <th>Hak Akses</th>
                                             <th>Nama</th>
                                             <th>Email</th>
@@ -44,7 +44,7 @@
                                             <td>{{ $user->email }}</td>
                                             <td>
                                                 <a href="{{ route('users.edit', $user->id) }}" class="btn btn-info">Ubah</a>
-                                                <a href="" class="btn btn-danger">Hapus</a>
+                                                <a href="{{ route('users.delete', $user->id) }}" class="btn btn-danger" id="delete">Hapus</a>
 
                                             </td>
 

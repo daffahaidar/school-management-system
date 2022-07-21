@@ -53,7 +53,91 @@
     <!-- {Your Brand} Admin App -->
     <script src="{{ asset('backend/js/template.js') }}"></script>
     <script src="{{ asset('backend/js/pages/dashboard.js') }}"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript">
+        $(function() {
+            $(document).on('click', '#delete', function(e) {
+                e.preventDefault();
+                var link = $(this).attr('href');
+                Swal.fire({
+                    title: 'Hapus Data Ini?',
+                    icon: 'warning',
+                    iconColor: '#EF3737',
+                    background: '#1A233B',
+                    showCancelButton: true,
+                    confirmButtonColor: '#EF3737',
+                    cancelButtonColor: '#7A15F7',
+                    confirmButtonText: 'Hapus!',
+                    cancelButtonText: 'Batal',
+
+                }).then((result) => {
+                    if (result.isConfirmed) {
+
+                        window.location.href = link;
+                    }
+                })
+            });
+        });
+    </script>
+
+    <!-- toaster -->
+    <script>
+        @if(Session::has('message'))
+        var type = "{{ Session::get('alert-type', 'info') }}"
+        var toastMixin = Swal.mixin({
+            toast: true,
+            icon: 'success',
+            background: '#1A233B',
+            title: '',
+            animation: false,
+            position: 'top-right',
+            showConfirmButton: false,
+            timer: 4000,
+            timerProgressBar: false,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        });
+        switch (type) {
+            case 'info':
+                toastMixin.fire({
+                    background: '#1A233B',
+                    iconColor: '#7a15f7',
+                    animation: true,
+                    title: "{{ Session::get('message') }}",
+                });
+                break;
+            case 'warning':
+                toastMixin.fire({
+                    background: '#1A233B',
+                    iconColor: '#F18700',
+                    animation: true,
+                    title: "{{ Session::get('message') }}",
+                });
+                break;
+            case 'success':
+                toastMixin.fire({
+                    background: '#1A233B',
+                    iconColor: '#00BC8B',
+                    animation: true,
+                    title: "{{ Session::get('message') }}",
+                });
+                break;
+            case 'error':
+                toastMixin.fire({
+                    background: '#1A233B',
+                    iconColor: '#ef3737',
+                    animation: true,
+                    title: "{{ Session::get('message') }}",
+                });
+                break;
+        }
+        @endif
+    </script>
+
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script>
         @if(Session::has('message'))
         var type = "{{ Session::get('alert-type', 'info') }}"
@@ -72,8 +156,7 @@
                 break;
         }
         @endif
-    </script>
-
+    </script> -->
 
 </body>
 

@@ -10,7 +10,7 @@
             <!-- Basic Forms -->
             <div class="box">
                 <div class="box-header with-border">
-                    <h4 class="box-title">Tambahkan Pengguna</h4>
+                    <h4 class="box-title">Ubah Pengguna</h4>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
@@ -30,8 +30,8 @@
                                                     <div class="controls">
                                                         <select name="usertype" id="usertype" required="" class="form-control">
                                                             <option value="" selected="" disabled="">Pilih Akses</option>
-                                                            <option value="Admin">Admin</option>
-                                                            <option value="User">User</option>
+                                                            <option value="Admin" {{ ($editData->usertype == "Admin" ? "selected": "") }}>Admin</option>
+                                                            <option value="User" {{ ($editData->usertype == "User" ? "selected": "") }}>User</option>
 
                                                         </select>
 
@@ -44,7 +44,7 @@
 
                                                     <h5>Nama Pengguna <span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <input type="text" name="name" class="form-control" required="">
+                                                        <input type="text" name="name" class="form-control" value="{{ $editData->name }}" required="">
                                                     </div>
 
                                                 </div>
@@ -58,26 +58,20 @@
 
                                                     <h5>Email Pengguna<span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <input type="email" name="email" class="form-control" required="">
+                                                        <input type="email" name="email" class="form-control" value="{{ $editData->email }}" required="">
                                                     </div>
 
                                                 </div>
 
                                             </div>
                                             <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <h5>Kata Sandi <span class="text-danger">*</span></h5>
-                                                    <div class="controls">
-                                                        <input type="password" name="password" class="form-control" required="">
-                                                    </div>
 
-                                                </div>
                                             </div>
                                         </div>
 
 
                                         <div class="text-xs-right">
-                                            <input type="submit" class="btn btn-rounded btn-info mb-5" value="Tambahkan">
+                                            <input type="submit" class="btn btn-rounded btn-info mb-5" value="Simpan Perubahan">
                                         </div>
                                     </div>
                             </form>

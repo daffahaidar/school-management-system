@@ -43,7 +43,7 @@
                                             <td>{{ $user->name }}</td>
                                             <td>{{ $user->email }}</td>
                                             <td>
-                                                <a href="" class="btn btn-info">Ubah</a>
+                                                <a href="{{ route('users.edit', $user->id) }}" class="btn btn-info">Ubah</a>
                                                 <a href="" class="btn btn-danger">Hapus</a>
 
                                             </td>

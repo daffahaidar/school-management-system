@@ -35,6 +35,7 @@
 | **21 July 2022** | Edit and Update User Data in Database     |
 | **21 July 2022** | Delete User Data from Database            |
 | **22 July 2022** | Add User Profile Image Stage 1            |
+| **23 July 2022** | Add User Profile Image Stage 2            |
 | **Next...**      | coming soon...                            |
 
 ## Authors

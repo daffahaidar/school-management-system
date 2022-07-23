@@ -16,4 +16,11 @@ class ProfileController extends Controller
 
         return view('backend.user.view_profile', compact('user'));
     }
+
+    public function ProfileEdit()
+    {
+        $id = Auth::user()->id;
+        $editData = User::find($id);
+        return view('backend.user.edit_profile', compact('editData'));
+    }
 }

@@ -30,11 +30,20 @@
         <div class="navbar-custom-menu r-side">
             <ul class="nav navbar-nav">
                 <!-- full Screen -->
-                <li class="search-bar">
+                <!-- <li class="search-bar">
                     <div class="lookup lookup-circle lookup-right">
                         <input type="text" name="s">
                     </div>
-                </li>
+                </li> -->
+                <!-- centre the text -->
+                <h5 class="m-auto">
+                    <?php
+
+                    use Illuminate\Support\Facades\Auth;
+
+                    echo Auth::user()->name;
+                    ?>
+                </h5>
                 <!-- Notifications -->
                 <li class="dropdown notifications-menu">
                     <a href="#" class="waves-effect waves-light rounded dropdown-toggle" data-toggle="dropdown" title="Notifications">

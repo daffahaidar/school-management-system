@@ -42,4 +42,5 @@ Route::prefix('profile')->group(function () {
 
     Route::get('/view', [ProfileController::class, 'ProfileView'])->name('profile.view');
     Route::get('/edit', [ProfileController::class, 'ProfileEdit'])->name('profile.edit');
+    Route::post('/store', [ProfileController::class, 'ProfileStore'])->name('profile.store');
 });

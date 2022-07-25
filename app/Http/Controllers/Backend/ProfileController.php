@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use App\Models\User;
+
 
 class ProfileController extends Controller
 {
@@ -49,5 +51,40 @@ class ProfileController extends Controller
         );
 
         return redirect()->route('profile.view')->with($notification);
+    }
+
+    public function PasswordView()
+    {
+        return view('backend.user.edit_password');
+    }
+
+    public function PasswordUpdate(Request $request)
+    {
+        $validatedData = $request->validate([
+            'oldpassword' => 'required',
+            'password' => 'required|confirmed',
+        ]);
+
+        $hashedPassword = Auth::user()->password;
+        if (Hash::check($request->oldpassword, $hashedPassword)) {
+            $user = User::find(Auth::id());
+            $user->password = Hash::make($request->password);
+            $user->save();
+            Auth::logout();
+            $notification = array(
+                'message' => 'Password anda berhasil diubah, silahkan login kembali!',
+                'alert-type' => 'success'
+            );
+
+            return redirect()->route('login')->with($notification);
+        } else {
+
+            $notification = array(
+                'message' => 'Password yang anda masukkan tidak cocok!',
+                'alert-type' => 'error'
+            );
+
+            return redirect()->back()->with($notification);
+        }
     }
 }

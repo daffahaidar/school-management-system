@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="hold-transition theme-primary bg-gradient-primary">
+<body class="hold-transition theme-primary dark-skin">
 
     <div class="container h-p100">
         <div class="row align-items-center justify-content-md-center h-p100">

@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="hold-transition theme-primary bg-gradient-primary">
+<body class="hold-transition theme-primary dark-skin">
 
     <div class="container h-p100">
         <div class="row align-items-center justify-content-md-center h-p100">
@@ -29,7 +29,7 @@
                 <div class="row justify-content-center no-gutters">
                     <div class="col-lg-4 col-md-5 col-12">
                         <div class="content-top-agile p-10">
-                            <h2 class="text-white">LOGIN</h2>
+                            <h2 class="text-white">MASUK</h2>
                             <p class="text-white-50">School Management System</p>
                         </div>
                         <div class="p-30 rounded30 box-shadowed b-2 b-dashed">
@@ -63,7 +63,7 @@
                                     <!-- /.col -->
                                     <div class="col-6">
                                         <div class="fog-pwd text-right">
-                                            <a href="{{ route('password.request') }}" class="text-white"><i class="ion ion-locked"></i> Lupa Sandi?</a><br>
+                                            <a href="{{ route('password.request') }}" class="text-white hover-info"><i class="ion ion-locked"></i> Lupa Sandi?</a><br>
                                         </div>
                                     </div>
                                     <!-- /.col -->
@@ -74,7 +74,7 @@
                                 </div>
                             </form>
 
-                            <div class="text-center text-white">
+                            <!-- <div class="text-center text-white">
                                 <p class="mt-20">- Masuk menggunakan -</p>
                                 <p class="gap-items-2 mb-20">
                                     <a class="btn btn-social-icon btn-round btn-outline btn-white" href="#"><i class="fa fa-facebook"></i></a>
@@ -82,10 +82,10 @@
                                     <a class="btn btn-social-icon btn-round btn-outline btn-white" href="#"><i class="fa fa-google-plus"></i></a>
                                     <a class="btn btn-social-icon btn-round btn-outline btn-white" href="#"><i class="fa fa-instagram"></i></a>
                                 </p>
-                            </div>
+                            </div> -->
 
                             <div class="text-center">
-                                <p class="mt-15 mb-0 text-white">Belum punya akun? <a href="{{ route('register') }}" class="text-white ml-5">Daftar</a></p>
+                                <p class="mt-15 mb-0 text-white">Belum punya akun? <a href="{{ route('register') }}" class="hover-info ml-5">Daftar</a></p>
                             </div>
                         </div>
                     </div>
@@ -98,6 +98,62 @@
     <!-- Vendor JS -->
     <script src="{{ asset('backend/js/vendors.min.js') }}"></script>
     <script src="{{ asset('../assets/icons/feather-icons/feather.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        @if(Session::has('message'))
+        var type = "{{ Session::get('alert-type', 'info') }}"
+        var toastMixin = Swal.mixin({
+            toast: true,
+            icon: 'success',
+            background: '#1A233B',
+            title: '',
+            animation: false,
+            position: 'top-right',
+            showConfirmButton: false,
+            timer: 5000,
+            timerProgressBar: false,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        });
+        switch (type) {
+            case 'info':
+                toastMixin.fire({
+                    background: '#1A233B',
+                    iconColor: '#7a15f7',
+                    animation: true,
+                    title: "{{ Session::get('message') }}",
+                });
+                break;
+            case 'warning':
+                toastMixin.fire({
+                    background: '#1A233B',
+                    iconColor: '#F18700',
+                    animation: true,
+                    title: "{{ Session::get('message') }}",
+                });
+                break;
+            case 'success':
+                toastMixin.fire({
+                    background: '#1A233B',
+                    iconColor: '#00BC8B',
+                    animation: true,
+                    title: "{{ Session::get('message') }}",
+                });
+                break;
+            case 'error':
+                toastMixin.fire({
+                    background: '#1A233B',
+                    icon: 'error',
+                    iconColor: '#ef3737',
+                    animation: true,
+                    title: "{{ Session::get('message') }}",
+                });
+                break;
+        }
+        @endif
+    </script>
 
 </body>
 

@@ -18,15 +18,15 @@
         <ul class="sidebar-menu" data-widget="tree">
 
             <li>
-                <a href="#">
-                    <i data-feather="pie-chart"></i>
+                <a href="{{ route('dashboard') }}">
+                    <i data-feather="grid"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
 
             <li class="treeview">
                 <a href="#">
-                    <i data-feather="message-circle"></i>
+                    <i data-feather="users"></i>
                     <span>Kelola Pengguna</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-right pull-right"></i>
@@ -40,14 +40,14 @@
 
             <li class="treeview">
                 <a href="#">
-                    <i data-feather="mail"></i> <span>Kelola Profil</span>
+                    <i data-feather="user"></i> <span>Kelola Profil</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-right pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="{{ route('profile.view') }}"><i class="ti-more"></i>Profil Saya</a></li>
-                    <li><a href="mailbox_compose.html"><i class="ti-more"></i>Kata Sandi</a></li>
+                    <li><a href="{{ route('password.view') }}"><i class="ti-more"></i>Kata Sandi</a></li>
                 </ul>
             </li>
 

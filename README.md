@@ -37,6 +37,7 @@
 | **22 July 2022** | Add User Profile Image Stage 1            |
 | **23 July 2022** | Add User Profile Image Stage 2            |
 | **24 July 2022** | Update User Profile                       |
+| **25 July 2022** | Add Change Password Feature               |
 | **Next...**      | coming soon...                            |
 
 ## Authors

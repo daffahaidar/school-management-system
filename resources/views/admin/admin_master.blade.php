@@ -55,31 +55,7 @@
     <script src="{{ asset('backend/js/pages/dashboard.js') }}"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script type="text/javascript">
-        $(function() {
-            $(document).on('click', '#delete', function(e) {
-                e.preventDefault();
-                var link = $(this).attr('href');
-                Swal.fire({
-                    title: 'Hapus Data Ini?',
-                    icon: 'warning',
-                    iconColor: '#EF3737',
-                    background: '#1A233B',
-                    showCancelButton: true,
-                    confirmButtonColor: '#EF3737',
-                    cancelButtonColor: '#7A15F7',
-                    confirmButtonText: 'Hapus!',
-                    cancelButtonText: 'Batal',
-
-                }).then((result) => {
-                    if (result.isConfirmed) {
-
-                        window.location.href = link;
-                    }
-                })
-            });
-        });
-    </script>
+    <script src="{{ asset('backend/js/pages/alert.js') }}"></script>
 
     <!-- toaster -->
     <script>
@@ -93,7 +69,7 @@
             animation: false,
             position: 'top-right',
             showConfirmButton: false,
-            timer: 4000,
+            timer: 5000,
             timerProgressBar: false,
             didOpen: (toast) => {
                 toast.addEventListener('mouseenter', Swal.stopTimer)
@@ -128,6 +104,7 @@
             case 'error':
                 toastMixin.fire({
                     background: '#1A233B',
+                    icon: 'error',
                     iconColor: '#ef3737',
                     animation: true,
                     title: "{{ Session::get('message') }}",

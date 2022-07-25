@@ -61,7 +61,7 @@ class UserController extends Controller
 
         $notification = array(
             'message' => 'Pengguna Berhasil Diubah!',
-            'alert-type' => 'info'
+            'alert-type' => 'success'
         );
 
         return redirect()->route('user.view')->with($notification);
@@ -74,7 +74,7 @@ class UserController extends Controller
 
         $notification = array(
             'message' => 'Pengguna Berhasil Dihapus!',
-            'alert-type' => 'error'
+            'alert-type' => 'success'
         );
 
         return redirect()->route('user.view')->with($notification);

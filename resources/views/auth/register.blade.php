@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="hold-transition theme-primary bg-gradient-primary">
+<body class="hold-transition theme-primary dark-skin">
 
     <div class="container h-p100">
         <div class="row align-items-center justify-content-md-center h-p100">
@@ -77,24 +77,24 @@
                                     </div> -->
                                     <!-- /.col -->
                                     <div class="col-12 text-center">
-                                        <button type="submit" class="btn btn-info btn-rounded margin-top-10">DAFTAR</button>
+                                        <button type="submit" class="btn btn-info btn-rounded margin-top-10 ">DAFTAR</button>
                                     </div>
                                     <!-- /.col -->
                                 </div>
                             </form>
 
-                            <div class="text-center text-white">
+                            <!-- <div class="text-center text-white">
                                 <p class="mt-20">- Daftar Menggunakan -</p>
                                 <p class="gap-items-2 mb-20">
-                                    <a class="btn btn-social-icon btn-round btn-outline btn-white" href="#"><i class="fa fa-facebook"></i></a>
+                                    <a class="btn btn-social-icon btn-round btn-outline btn-white hover-info" href="#"><i class="fa fa-facebook"></i></a>
                                     <a class="btn btn-social-icon btn-round btn-outline btn-white" href="#"><i class="fa fa-twitter"></i></a>
                                     <a class="btn btn-social-icon btn-round btn-outline btn-white" href="#"><i class="fa fa-google-plus"></i></a>
                                     <a class="btn btn-social-icon btn-round btn-outline btn-white" href="#"><i class="fa fa-instagram"></i></a>
                                 </p>
-                            </div>
+                            </div> -->
 
                             <div class="text-center">
-                                <p class="mt-15 mb-0 text-white">Sudah memiliki akun?<a href="{{ route('login') }}" class="text-white ml-5"> Masuk</a></p>
+                                <p class="mt-15 mb-0 text-white">Sudah memiliki akun?<a href="{{ route('login') }}" class="ml-5 hover-info"> Masuk</a></p>
                             </div>
                         </div>
                     </div>

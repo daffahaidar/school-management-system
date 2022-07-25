@@ -1,3 +1,9 @@
+@php
+$prefix = Request::route()->getPrefix();
+$route = Route::current()->getName();
+@endphp
+
+
 <aside class="main-sidebar">
     <!-- sidebar-->
     <section class="sidebar">
@@ -17,14 +23,14 @@
         <!-- sidebar menu-->
         <ul class="sidebar-menu" data-widget="tree">
 
-            <li>
+            <li class="{{ ($route == 'dashboard')?'active':'' }}">
                 <a href="{{ route('dashboard') }}">
                     <i data-feather="grid"></i>
-                    <span>Dashboard</span>
+                    <span>Beranda</span>
                 </a>
             </li>
 
-            <li class="treeview">
+            <li class="treeview {{ ($prefix == '/users')?'active':'' }}">
                 <a href="#">
                     <i data-feather="users"></i>
                     <span>Kelola Pengguna</span>
@@ -38,7 +44,7 @@
                 </ul>
             </li>
 
-            <li class="treeview">
+            <li class="treeview {{ ($prefix == '/profile')?'active':'' }}">
                 <a href="#">
                     <i data-feather="user"></i> <span>Kelola Profil</span>
                     <span class="pull-right-container">

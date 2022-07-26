@@ -32,7 +32,7 @@ $route = Route::current()->getName();
 
             <li class="treeview {{ ($prefix == '/users')?'active':'' }}">
                 <a href="#">
-                    <i data-feather="users"></i>
+                    <i class="fa fa-light fa-users"></i>
                     <span>Kelola Pengguna</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-right pull-right"></i>
@@ -46,7 +46,7 @@ $route = Route::current()->getName();
 
             <li class="treeview {{ ($prefix == '/profile')?'active':'' }}">
                 <a href="#">
-                    <i data-feather="user"></i> <span>Kelola Profil</span>
+                    <i class="fa fa-solid fa-user"></i> <span>Kelola Profil</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-right pull-right"></i>
                     </span>
@@ -59,7 +59,7 @@ $route = Route::current()->getName();
 
             <li class="treeview {{ ($prefix == '/setups')?'active':'' }}">
                 <a href="#">
-                    <i data-feather="user"></i> <span>Manajemen Siswa</span>
+                    <i class="fa fa-user-graduate"></i></i><span>Manajemen Siswa</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-right pull-right"></i>
                     </span>
@@ -75,7 +75,7 @@ $route = Route::current()->getName();
 
             <li class="treeview">
                 <a href="#">
-                    <i data-feather="grid"></i>
+                    <i data-feather="settings"></i>
                     <span>Components</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-right pull-right"></i>

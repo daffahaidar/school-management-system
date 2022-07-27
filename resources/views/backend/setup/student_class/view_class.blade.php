@@ -28,7 +28,7 @@
                                     <thead>
                                         <tr>
                                             <th width="5%">No.</th>
-                                            <th>Nama</th>
+                                            <th>Nama Kelas</th>
                                             <th width="25%">Tindakan</th>
 
                                         </tr>
@@ -40,7 +40,7 @@
                                             <td>{{ $student->name }}</td>
                                             <td>
                                                 <a href="{{ route('student.class.edit', $student->id) }}" class="btn btn-info">Ubah</a>
-                                                <a href="{{ route('users.delete', $student->id) }}" class="btn btn-danger" id="delete">Hapus</a>
+                                                <a href="{{ route('student.class.delete', $student->id) }}" class="btn btn-danger" id="delete">Hapus</a>
 
                                             </td>
 

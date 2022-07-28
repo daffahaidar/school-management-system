@@ -40,7 +40,7 @@
                                             <td>{{ $year->name }}</td>
                                             <td>
                                                 <a href="{{ route('student.year.edit', $year->id) }}" class="btn btn-info">Ubah</a>
-                                                <a href="{{ route('student.class.delete', $year->id) }}" class="btn btn-danger" id="delete">Hapus</a>
+                                                <a href="{{ route('student.year.delete', $year->id) }}" class="btn btn-danger" id="delete">Hapus</a>
 
                                             </td>
 

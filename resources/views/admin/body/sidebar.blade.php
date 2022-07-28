@@ -57,16 +57,16 @@ $route = Route::current()->getName();
                 </ul>
             </li>
 
-            <li class="treeview {{ ($prefix == '/setups')?'active':'' }}">
+            <li class="treeview {{ ($prefix == '/setup')?'active':'' }}">
                 <a href="#">
-                    <i class="fa fa-user-graduate"></i></i><span>Manajemen Siswa</span>
+                    <i class="fa fa-solid fa-gear"></i></i></i><span>Pengaturan</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-right pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ route('student.class.view') }}"><i class="ti-more"></i>Kelas Siswa</a></li>
-                    <li><a href="{{ route('student.year.view') }}"><i class="ti-more"></i>Angkatan siswa</a></li>
+                    <li><a href="{{ route('student.class.view') }}"><i class="ti-more"></i>Atur Kelas</a></li>
+                    <li><a href="{{ route('student.year.view') }}"><i class="ti-more"></i>Atur Tahun Angkatan</a></li>
                 </ul>
             </li>
 

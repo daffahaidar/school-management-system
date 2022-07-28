@@ -50,7 +50,7 @@ Route::prefix('profile')->group(function () {
 });
 
 // Student Management all routes
-Route::prefix('setups')->group(function () {
+Route::prefix('setup')->group(function () {
 
     Route::get('student/class/view', [StudentClassController::class, 'ViewStudent'])->name('student.class.view');
     Route::get('student/class/add', [StudentClassController::class, 'StudentClassAdd'])->name('student.class.add');
@@ -63,4 +63,6 @@ Route::prefix('setups')->group(function () {
     Route::get('student/year/add', [StudentYearController::class, 'StudentYearAdd'])->name('student.year.add');
     Route::post('student/year/store', [StudentYearController::class, 'StudentYearStore'])->name('store.student.year');
     Route::get('student/year/edit/{id}', [StudentYearController::class, 'StudentYearEdit'])->name('student.year.edit');
+    Route::post('student/year/update/{id}', [StudentYearController::class, 'StudentYearUpdate'])->name('update.student.year');
+    Route::get('student/year/delete/{id}', [StudentYearController::class, 'StudentYearDelete'])->name('student.year.delete');
 });

@@ -42,6 +42,7 @@
 | **26 July 2022** | Insert Student Class into Database          |
 | **27 July 2022** | Update and Delete Student Class in Database |
 | **27 July 2022** | Insert Student Year into Database           |
+| **28 July 2022** | Update and Delete Student Year in Database  |
 | **Next...**      | coming soon...                              |
 
 ## Authors

@@ -43,6 +43,7 @@
 | **27 July 2022** | Update and Delete Student Class in Database |
 | **27 July 2022** | Insert Student Year into Database           |
 | **28 July 2022** | Update and Delete Student Year in Database  |
+| **28 July 2022** | Add Student Group Management Feature        |
 | **Next...**      | coming soon...                              |
 
 ## Authors

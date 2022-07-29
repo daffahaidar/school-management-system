@@ -8,6 +8,11 @@ use App\Models\StudentClass;
 
 class StudentClassController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function ViewStudent()
     {
         $data['allData'] = StudentClass::all();
@@ -16,6 +21,9 @@ class StudentClassController extends Controller
 
     public function StudentClassAdd()
     {
+        // if (auth()->user()->usertype == 'User') {
+        //     return redirect()->route('student.class.view');
+        // }
         return view('backend.setup.student_class.add_class');
     }
 

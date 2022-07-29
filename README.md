@@ -44,6 +44,7 @@
 | **27 July 2022** | Insert Student Year into Database           |
 | **28 July 2022** | Update and Delete Student Year in Database  |
 | **28 July 2022** | Add Student Group Management Feature        |
+| **29 July 2022** | Add Exception Handling and Fix Route Access |
 | **Next...**      | coming soon...                              |
 
 ## Authors

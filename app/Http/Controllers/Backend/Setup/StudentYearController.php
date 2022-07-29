@@ -8,6 +8,11 @@ use App\Models\StudentYear;
 
 class StudentYearController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function ViewYear()
     {
         $data['allData'] = StudentYear::all();

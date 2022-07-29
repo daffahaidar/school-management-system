@@ -8,6 +8,11 @@ use App\Models\StudentGroup;
 
 class StudentGroupController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function ViewGroup()
     {
         $data['allData'] = StudentGroup::all();

@@ -69,6 +69,7 @@ $route = Route::current()->getName();
                     <li><a href="{{ route('student.year.view') }}"><i class="ti-more"></i>Atur Tahun Angkatan</a></li>
                     <li><a href="{{ route('student.group.view') }}"><i class="ti-more"></i>Atur Kelompok</a></li>
                     <li><a href="{{ route('student.shift.view') }}"><i class="ti-more"></i>Atur Shift Siswa</a></li>
+                    <li><a href="{{ route('fee.category.view') }}"><i class="ti-more"></i>Atur Pembiayaan</a></li>
                 </ul>
             </li>
 

@@ -47,6 +47,7 @@
 | **29 July 2022** | Add Exception Handling and Fix Route Access |
 | **30 July 2022** | Add Student Shift Management Feature        |
 | **30 July 2022** | Add Student Fee Category                    |
+| **30 July 2022** | Add Student Fee Amount Stage 1              |
 | **Next...**      | coming soon...                              |
 
 ## Authors

@@ -59,17 +59,18 @@ $route = Route::current()->getName();
 
             <li class="treeview {{ ($prefix == '/setup')?'active':'' }}">
                 <a href="#">
-                    <i class="fa fa-solid fa-gear"></i></i></i><span>Pengaturan</span>
+                    <i class="fa fa-solid fa-gear"></i></i></i><span>Administrasi</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-right pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ route('student.class.view') }}"><i class="ti-more"></i>Atur Kelas</a></li>
-                    <li><a href="{{ route('student.year.view') }}"><i class="ti-more"></i>Atur Tahun Angkatan</a></li>
-                    <li><a href="{{ route('student.group.view') }}"><i class="ti-more"></i>Atur Kelompok</a></li>
-                    <li><a href="{{ route('student.shift.view') }}"><i class="ti-more"></i>Atur Shift Siswa</a></li>
-                    <li><a href="{{ route('fee.category.view') }}"><i class="ti-more"></i>Atur Pembiayaan</a></li>
+                    <li><a href="{{ route('student.class.view') }}"><i class="ti-more"></i>Kelas Siswa</a></li>
+                    <li><a href="{{ route('student.year.view') }}"><i class="ti-more"></i>Tahun Angkatan</a></li>
+                    <li><a href="{{ route('student.group.view') }}"><i class="ti-more"></i>Jurusan</a></li>
+                    <li><a href="{{ route('student.shift.view') }}"><i class="ti-more"></i>Shift Siswa</a></li>
+                    <li><a href="{{ route('fee.category.view') }}"><i class="ti-more"></i>Kategori Pembayaran</a></li>
+                    <li><a href="{{ route('fee.amount.view') }}"><i class="ti-more"></i>Kelola Tagihan</a></li>
                 </ul>
             </li>
 

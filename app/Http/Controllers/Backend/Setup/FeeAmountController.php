@@ -48,4 +48,12 @@ class FeeAmountController extends Controller
         );
         return redirect()->route('fee.amount.view')->with($notification);
     }
+
+    public function EditFeeAmount($fee_category_id)
+    {
+        $data['editData'] = FeeCategoryAmount::where('fee_category_id', $fee_category_id)->orderBy('class_id', 'asc')->get();
+        $data['fee_categories'] = FeeCategory::all();
+        $data['classes'] = StudentClass::all();
+        return view('backend.setup.fee_amount.edit_fee_amount', $data);
+    }
 }

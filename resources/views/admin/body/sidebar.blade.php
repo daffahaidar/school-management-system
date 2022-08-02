@@ -59,7 +59,7 @@ $route = Route::current()->getName();
 
             <li class="treeview {{ ($prefix == '/setup')?'active':'' }}">
                 <a href="#">
-                    <i class="fa fa-solid fa-gear"></i></i></i><span>Administrasi</span>
+                    <i class="fa fa-solid fa-book"></i></i></i><span>Administrasi</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-right pull-right"></i>
                     </span>

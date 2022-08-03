@@ -48,9 +48,9 @@
 | **30 July 2022**  | Add Student Shift Management Feature        |
 | **30 July 2022**  | Add Student Fee Category                    |
 | **30 July 2022**  | Add Student Fee Amount Stage 1              |
-| **30 July 2022**  | Add Student Fee Amount Stage 1              |
 | **1 August 2022** | Add Student Fee Amount Stage 2              |
 | **2 August 2022** | Edit Student Fee Amount Stage 1             |
+| **3 August 2022** | Edit Student Fee Amount Stage 2             |
 | **Next...**       | coming soon...                              |
 
 ## Authors

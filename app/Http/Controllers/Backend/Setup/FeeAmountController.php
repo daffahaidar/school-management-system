@@ -83,4 +83,20 @@ class FeeAmountController extends Controller
         );
         return redirect()->route('fee.amount.view')->with($notification);
     }
+
+    public function DetailsFeeAmount($fee_category_id)
+    {
+        $data['detailsData'] = FeeCategoryAmount::where('fee_category_id', $fee_category_id)->orderBy('class_id', 'asc')->get();
+        return view('backend.setup.fee_amount.details_fee_amount', $data);
+    }
+
+    public function DeleteFeeAmount($fee_category_id)
+    {
+        FeeCategoryAmount::where('fee_category_id', $fee_category_id)->delete();
+        $notification = array(
+            'message' => 'Tagihan biaya berhasil dihapus!',
+            'alert-type' => 'success'
+        );
+        return redirect()->route('fee.amount.view')->with($notification);
+    }
 }

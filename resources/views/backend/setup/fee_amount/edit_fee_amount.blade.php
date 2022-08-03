@@ -63,7 +63,7 @@
                                                         <div class="form-group">
                                                             <h5>Jumlah Tagihan (Rp. ) <span class="text-danger">*</span></h5>
                                                             <div class="controls">
-                                                                <input type="text" name="amount[]" value="{{ $edit->amount }}" class="form-control" required="">
+                                                                <input type="number" min="0" name="amount[]" value="{{ $edit->amount }}" class="form-control" required="">
                                                             </div>
 
                                                         </div>
@@ -125,7 +125,7 @@
                     <div class="form-group" style="margin-left:8px;">
                         <h5>Jumlah Tagihan (Rp. ) <span class="text-danger">*</span></h5>
                         <div class="controls">
-                            <input type="text" name="amount[]" class="form-control" required="" style="width: 387px;">
+                            <input type="number" min="0" name="amount[]" class="form-control" required="" style="width: 387px;">
                         </div>
 
                     </div>

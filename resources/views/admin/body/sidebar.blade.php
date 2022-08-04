@@ -57,7 +57,7 @@ $route = Route::current()->getName();
                 </ul>
             </li>
 
-            <li class="treeview {{ ($prefix == '/setup')?'active':'' }}">
+            <li class="treeview {{ ($prefix == '/administrations')?'active':'' }}">
                 <a href="#">
                     <i class="fa fa-solid fa-book"></i></i></i><span>Administrasi</span>
                     <span class="pull-right-container">
@@ -71,6 +71,7 @@ $route = Route::current()->getName();
                     <li><a href="{{ route('student.shift.view') }}"><i class="ti-more"></i>Shift Siswa</a></li>
                     <li><a href="{{ route('fee.category.view') }}"><i class="ti-more"></i>Kategori Pembayaran</a></li>
                     <li><a href="{{ route('fee.amount.view') }}"><i class="ti-more"></i>Kelola Tagihan</a></li>
+                    <li><a href="{{ route('exam.type.view') }}"><i class="ti-more"></i>Ujian Siswa</a></li>
                 </ul>
             </li>
 

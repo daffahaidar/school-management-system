@@ -53,6 +53,7 @@
 | **3 August 2022** | Edit Student Fee Amount Stage 2             |
 | **3 August 2022** | Add Details View Student Fee Amount Feature |
 | **4 August 2022** | Add Student Exam Management Feature         |
+| **4 August 2022** | Add School Subject Management Feature       |
 | **Next...**       | coming soon...                              |
 
 ## Authors

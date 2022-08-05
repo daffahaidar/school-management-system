@@ -54,6 +54,7 @@
 | **3 August 2022** | Add Details View Student Fee Amount Feature |
 | **4 August 2022** | Add Student Exam Management Feature         |
 | **4 August 2022** | Add School Subject Management Feature       |
+| **5 August 2022** | Assign Subject Management Stage 1           |
 | **Next...**       | coming soon...                              |
 
 ## Authors

@@ -13,6 +13,7 @@ use App\Http\Controllers\Backend\Setup\FeeCategoryController;
 use App\Http\Controllers\Backend\Setup\FeeAmountController;
 use App\Http\Controllers\Backend\Setup\ExamTypeController;
 use App\Http\Controllers\Backend\Setup\SchoolSubjectController;
+use App\Http\Controllers\Backend\Setup\AssignSubjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -120,4 +121,12 @@ Route::prefix('administrations')->group(function () {
     Route::get('school/subject/edit/{id}', [SchoolSubjectController::class, 'SchoolSubjectEdit'])->name('school.subject.edit');
     Route::post('school/subject/update/{id}', [SchoolSubjectController::class, 'SchoolSubjectUpdate'])->name('update.school.subject');
     Route::get('school/subject/delete/{id}', [SchoolSubjectController::class, 'SchoolSubjectDelete'])->name('school.subject.delete');
+
+    Route::get('assign/subject/view', [AssignSubjectController::class, 'ViewAssignSubject'])->name('assign.subject.view');
+    Route::get('fee/amount/add', [AssignSubjectController::class, 'AddAssignSubject'])->name('fee.amount.add');
+    Route::post('fee/amount/store', [AssignSubjectController::class, 'StoreAssignSubject'])->name('store.fee.amount');
+    Route::get('fee/amount/edit/{fee_category_id}', [AssignSubjectController::class, 'EditAssignSubject'])->name('fee.amount.edit');
+    Route::post('fee/amount/update/{fee_category_id}', [AssignSubjectController::class, 'UpdateAssignSubject'])->name('update.fee.amount');
+    Route::get('fee/amount/details/{fee_category_id}', [AssignSubjectController::class, 'DetailsAssignSubject'])->name('fee.amount.details');
+    Route::get('fee/amount/delete/{fee_category_id}', [AssignSubjectController::class, 'DeleteAssignSubject'])->name('fee.amount.delete');
 });

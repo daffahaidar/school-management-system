@@ -123,8 +123,8 @@ Route::prefix('administrations')->group(function () {
     Route::get('school/subject/delete/{id}', [SchoolSubjectController::class, 'SchoolSubjectDelete'])->name('school.subject.delete');
 
     Route::get('assign/subject/view', [AssignSubjectController::class, 'ViewAssignSubject'])->name('assign.subject.view');
-    Route::get('fee/amount/add', [AssignSubjectController::class, 'AddAssignSubject'])->name('fee.amount.add');
-    Route::post('fee/amount/store', [AssignSubjectController::class, 'StoreAssignSubject'])->name('store.fee.amount');
+    Route::get('assign/subject/add', [AssignSubjectController::class, 'AddAssignSubject'])->name('assign.subject.add');
+    Route::post('assign/subject/store', [AssignSubjectController::class, 'StoreAssignSubject'])->name('store.assign.subject');
     Route::get('fee/amount/edit/{fee_category_id}', [AssignSubjectController::class, 'EditAssignSubject'])->name('fee.amount.edit');
     Route::post('fee/amount/update/{fee_category_id}', [AssignSubjectController::class, 'UpdateAssignSubject'])->name('update.fee.amount');
     Route::get('fee/amount/details/{fee_category_id}', [AssignSubjectController::class, 'DetailsAssignSubject'])->name('fee.amount.details');

@@ -17,8 +17,8 @@
 
                     <div class="box">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Daftar Mata Pelajaran</h3>
-                            <a href="{{ route('fee.amount.add') }}" style="float: right;" class="btn btn-rounded btn-success mb-5"> Tambahkan Mata Pelajaran</a>
+                            <h3 class="box-title">Daftar Kurikulum</h3>
+                            <a href="{{ route('assign.subject.add') }}" style="float: right;" class="btn btn-rounded btn-success mb-5"> Tetapkan Kurikulum Pelajaran</a>
                         </div>
 
                         <!-- /.box-header -->
@@ -37,7 +37,7 @@
                                         @foreach($allData as $key => $assign)
                                         <tr>
                                             <td>{{ $key+1 }}</td>
-                                            <td>{{ $assign->class_id }}</td>
+                                            <td>{{ $assign['student_class']['name'] }}</td>
                                             <td>
                                                 <a href="" class="btn btn-info">Ubah</a>
                                                 <a href="" class="btn btn-primary">Rincian</a>

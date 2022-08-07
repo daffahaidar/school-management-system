@@ -56,6 +56,7 @@
 | **4 August 2022** | Add School Subject Management Feature       |
 | **5 August 2022** | Assign Subject Management Stage 1           |
 | **6 August 2022** | Assign Subject Management Stage 2           |
+| **7 August 2022** | Edit Assign Subject Management              |
 | **Next...**       | coming soon...                              |
 
 ## Authors

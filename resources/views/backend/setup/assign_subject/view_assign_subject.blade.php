@@ -39,7 +39,7 @@
                                             <td>{{ $key+1 }}</td>
                                             <td>{{ $assign['student_class']['name'] }}</td>
                                             <td>
-                                                <a href="" class="btn btn-info">Ubah</a>
+                                                <a href="{{ route('assign.subject.edit', $assign->class_id) }}" class="btn btn-info">Ubah</a>
                                                 <a href="" class="btn btn-primary">Rincian</a>
                                                 <a href="" class="btn btn-danger" id="delete">Hapus</a>
                                             </td>

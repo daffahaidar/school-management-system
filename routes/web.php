@@ -125,8 +125,8 @@ Route::prefix('administrations')->group(function () {
     Route::get('assign/subject/view', [AssignSubjectController::class, 'ViewAssignSubject'])->name('assign.subject.view');
     Route::get('assign/subject/add', [AssignSubjectController::class, 'AddAssignSubject'])->name('assign.subject.add');
     Route::post('assign/subject/store', [AssignSubjectController::class, 'StoreAssignSubject'])->name('store.assign.subject');
-    Route::get('fee/amount/edit/{fee_category_id}', [AssignSubjectController::class, 'EditAssignSubject'])->name('fee.amount.edit');
-    Route::post('fee/amount/update/{fee_category_id}', [AssignSubjectController::class, 'UpdateAssignSubject'])->name('update.fee.amount');
+    Route::get('assign/subject/edit/{class_id}', [AssignSubjectController::class, 'EditAssignSubject'])->name('assign.subject.edit');
+    Route::post('assign/subject/update/{class_id}', [AssignSubjectController::class, 'UpdateAssignSubject'])->name('update.assign.subject');
     Route::get('fee/amount/details/{fee_category_id}', [AssignSubjectController::class, 'DetailsAssignSubject'])->name('fee.amount.details');
     Route::get('fee/amount/delete/{fee_category_id}', [AssignSubjectController::class, 'DeleteAssignSubject'])->name('fee.amount.delete');
 });

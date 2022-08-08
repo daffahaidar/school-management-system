@@ -17,33 +17,32 @@
 
                     <div class="box">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Daftar Kurikulum</h3>
-                            <a href="{{ route('assign.subject.add') }}" style="float: right;" class="btn btn-rounded btn-success mb-5"> Tetapkan Kurikulum Pelajaran</a>
+                            <h3 class="box-title">Rincian Kurikulum {{ $detailsData['0']['student_class']['name'] }}</h3>
+                            <a href="{{ route('assign.subject.view') }}" style="float: right;" class="btn btn-rounded btn-primary mb-5"> Kembali</a>
                         </div>
 
                         <!-- /.box-header -->
                         <div class="box-body">
                             <div class="table-responsive">
-                                <table id="example1" class="table table-bordered table-striped">
-                                    <thead>
+                                <table class="table table-bordered table-striped">
+                                    <thead class="thead-light">
                                         <tr>
                                             <th width="5%">No.</th>
-                                            <th>Nama Kelas</th>
-                                            <th width="30%">Tindakan</th>
+                                            <th width="20%">Mata Pelajaran</th>
+                                            <th width="20%">Nilai Rata-Rata</th>
+                                            <th width="20%">Nilai KKM</th>
+                                            <th width="20%">Target Nilai</th>
 
                                         </tr>
                                     </thead>
-                                    <tbody class="text-align-center">
-                                        @foreach($allData as $key => $assign)
+                                    <tbody>
+                                        @foreach($detailsData as $key => $detail)
                                         <tr>
                                             <td>{{ $key+1 }}</td>
-                                            <td>{{ $assign['student_class']['name'] }}</td>
-                                            <td>
-                                                <a href="{{ route('assign.subject.edit', $assign->class_id) }}" class="btn btn-info">Ubah</a>
-                                                <a href="{{ route('assign.subject.details', $assign->class_id) }}" class="btn btn-primary">Rincian</a>
-                                                <a href="{{ route('assign.subject.delete', $assign->class_id) }}" class="btn btn-danger" id="delete">Hapus</a>
-                                            </td>
-
+                                            <td>{{ $detail['school_subject']['name'] }}</td>
+                                            <td>{{ $detail->full_mark }}</td>
+                                            <td>{{ $detail->pass_mark }}</td>
+                                            <td>{{ $detail->subjective_mark }}</td>
                                         </tr>
                                         @endforeach
 

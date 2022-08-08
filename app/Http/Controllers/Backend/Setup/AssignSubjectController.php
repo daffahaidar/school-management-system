@@ -87,4 +87,20 @@ class AssignSubjectController extends Controller
         );
         return redirect()->route('assign.subject.view')->with($notification);
     }
+
+    public function DetailsAssignSubject($class_id)
+    {
+        $data['detailsData'] = AssignSubject::where('class_id', $class_id)->orderBy('subject_id', 'asc')->get();
+        return view('backend.setup.assign_subject.details_assign_subject', $data);
+    }
+
+    public function DeleteAssignSubject($class_id)
+    {
+        AssignSubject::where('class_id', $class_id)->delete();
+        $notification = array(
+            'message' => 'Kurikulum berhasil dihapus!',
+            'alert-type' => 'success'
+        );
+        return redirect()->route('assign.subject.view')->with($notification);
+    }
 }

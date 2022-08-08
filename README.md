@@ -2,6 +2,11 @@
 
 <p align = "center">This is one of my open source portfolio projects that I will be working on during the semester break to build a school management system that might in the future be used and utilized by various school agencies that need this application for their agency needs.</p>
 
+## Notes
+
+-   If you want to take the source code or clone this repository, please follow my github or star this repository to support and encourage me
+-   All content in this school management system application is written in Indonesian, but you can change it to a language you understand
+
 ## Current Tech Stack
 
 -   HTML 5
@@ -19,7 +24,7 @@
 | Date              | Progress                                    |
 | :---------------- | :------------------------------------------ |
 | **27 June 2022**  | Installing Laravel 9 Framework              |
-| **28 June 2022**  | Installing Laravel Authentication           |
+| **28 June 2022**  | Installing Laravel Jetstream Authentication |
 | **28 June 2022**  | Create Database and Migration               |
 | **29 June 2022**  | Customize Admin Dashboard                   |
 | **29 June 2022**  | Dashboard Page Segmentation                 |
@@ -57,7 +62,57 @@
 | **5 August 2022** | Assign Subject Management Stage 1           |
 | **6 August 2022** | Assign Subject Management Stage 2           |
 | **7 August 2022** | Edit Assign Subject Management              |
+| **8 August 2022** | Detail and Delete Assign Subject Feature    |
 | **Next...**       | coming soon...                              |
+
+## Installation
+
+-   Give me a star or follow my GitHub
+-   Clone this repository
+
+```bash
+git clone https://github.com/daffahaidar/school-management-system.git
+```
+
+-   Go to the folder application using `cd` command on your cmd or terminal
+-   Run composer install on your cmd or terminal
+
+```bash
+composer install
+```
+
+-   Copy `.env.example` file to `.env` on the root folder.
+
+```bash
+copy .env.example .env
+```
+
+-   If you using terminal on Ubuntu run it to copy
+
+```bash
+cp .env.example .env
+```
+
+-   Open your `.env` file and change the database name (`DB_DATABASE`) to whatever you have, username (`DB_USERNAME`) and password (`DB_PASSWORD`) field correspond to your configuration.
+-   Generate the App Key
+
+```bash
+php artisan key:generate
+```
+
+-   Migrate your database
+
+```bash
+php artisan migrate
+```
+
+-   Run the laravel server
+
+```bash
+php artisan serve
+```
+
+-   Open http://localhost:8000
 
 ## Authors
 

@@ -6,6 +6,7 @@
 
 -   If you want to take the source code or clone this repository, please follow my github or star this repository to support and encourage me
 -   All content in this school management system application is written in Indonesian, but you can change it to a language you understand
+-   Sorry for my bad english, I am learning a lot of new things everyday and I am still learning how to write in english.
 
 ## Current Tech Stack
 
@@ -62,7 +63,8 @@
 | **5 August 2022** | Assign Subject Management Stage 1           |
 | **6 August 2022** | Assign Subject Management Stage 2           |
 | **7 August 2022** | Edit Assign Subject Management              |
-| **8 August 2022** | Detail and Delete Assign Subject Feature    |
+| **8 August 2022** | Details and Delete Assign Subject Feature   |
+| **9 August 2022** | Add School Designation Management Feature   |
 | **Next...**       | coming soon...                              |
 
 ## Installation

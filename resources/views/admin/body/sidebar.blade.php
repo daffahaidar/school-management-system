@@ -10,7 +10,7 @@ $route = Route::current()->getName();
 
         <div class="user-profile">
             <div class="ulogo">
-                <a href="index.html">
+                <a href="{{ route('dashboard') }}">
                     <!-- logo for regular state and mobile devices -->
                     <div class="d-flex align-items-center justify-content-center">
                         <img src="{{asset('backend/images/logo-dark.png')}}" alt="Logo">
@@ -74,6 +74,7 @@ $route = Route::current()->getName();
                     <li><a href="{{ route('exam.type.view') }}"><i class="ti-more"></i>Ujian Siswa</a></li>
                     <li><a href="{{ route('school.subject.view') }}"><i class="ti-more"></i>Mata Pelajaran</a></li>
                     <li><a href="{{ route('assign.subject.view') }}"><i class="ti-more"></i>Kurikulum</a></li>
+                    <li><a href="{{ route('designation.view') }}"><i class="ti-more"></i>Aparatur Sekolah</a></li>
                 </ul>
             </li>
 

@@ -59,7 +59,7 @@ $route = Route::current()->getName();
 
             <li class="treeview {{ ($prefix == '/administrations')?'active':'' }}">
                 <a href="#">
-                    <i class="fa fa-solid fa-book"></i></i></i><span>Administrasi</span>
+                    <i class="fa fa-solid fa-book"></i><span>Administrasi</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-right pull-right"></i>
                     </span>
@@ -74,7 +74,19 @@ $route = Route::current()->getName();
                     <li><a href="{{ route('exam.type.view') }}"><i class="ti-more"></i>Ujian Siswa</a></li>
                     <li><a href="{{ route('school.subject.view') }}"><i class="ti-more"></i>Mata Pelajaran</a></li>
                     <li><a href="{{ route('assign.subject.view') }}"><i class="ti-more"></i>Kurikulum</a></li>
-                    <li><a href="{{ route('designation.view') }}"><i class="ti-more"></i>Aparatur Sekolah</a></li>
+                    <li><a href="{{ route('designation.view') }}"><i class="ti-more"></i>Jabatan Sekolah</a></li>
+                </ul>
+            </li>
+
+            <li class="treeview {{ ($prefix == '/students')?'active':'' }}">
+                <a href="#">
+                    <i class="fa fa-solid fa-graduation-cap"></i><span>Manajemen Siswa</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-right pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ route('student.registration.view') }}"><i class="ti-more"></i>Pendaftaran Siswa</a></li>
                 </ul>
             </li>
 

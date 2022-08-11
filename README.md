@@ -66,6 +66,7 @@
 | **8 August 2022**  | Details and Delete Assign Subject Feature   |
 | **9 August 2022**  | Add School Designation Management Feature   |
 | **10 August 2022** | Refactoring and Remodeling Users Database   |
+| **11 August 2022** | Implement Role Access Authentication        |
 | **Next...**        | coming soon...                              |
 
 ## Installation

@@ -28,10 +28,11 @@
                                     <thead>
                                         <tr>
                                             <th width="5%">No.</th>
+                                            <th>ID Pengguna</th>
                                             <th>Hak Akses</th>
                                             <th>Nama</th>
                                             <th>Email</th>
-                                            <th width="25%">Tindakan</th>
+                                            <th width="20%">Tindakan</th>
 
                                         </tr>
                                     </thead>
@@ -39,7 +40,8 @@
                                         @foreach($allData as $key => $user)
                                         <tr>
                                             <td>{{ $key+1 }}</td>
-                                            <td>{{ $user->usertype }}</td>
+                                            <td>{{ $user->code }}</td>
+                                            <td>{{ $user->role }}</td>
                                             <td>{{ $user->name }}</td>
                                             <td>{{ $user->email }}</td>
                                             <td>

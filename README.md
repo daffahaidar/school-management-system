@@ -67,6 +67,7 @@
 | **9 August 2022**  | Add School Designation Management Feature   |
 | **10 August 2022** | Refactoring and Remodeling Users Database   |
 | **11 August 2022** | Implement Role Access Authentication        |
+| **12 August 2022** | Implement Random Generate User Id           |
 | **Next...**        | coming soon...                              |
 
 ## Installation

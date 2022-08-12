@@ -20,6 +20,9 @@ class CreateNewUser implements CreatesNewUsers
      */
     public function create(array $input)
     {
+        $random = "0JAK2LBM3NCO4PDQ5RES6TFU7VGW8XHY9ZI";
+        $code = substr(str_shuffle($random), 0, 8);
+
         Validator::make($input, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
@@ -31,7 +34,9 @@ class CreateNewUser implements CreatesNewUsers
             'name' => $input['name'],
             'email' => $input['email'],
             'password' => Hash::make($input['password']),
-            'usertype' => "User",
+            'usertype' => "Admin",
+            'code' => $code,
+            'role' => "User",
         ]);
     }
 }

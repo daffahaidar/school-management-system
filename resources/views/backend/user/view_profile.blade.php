@@ -26,7 +26,7 @@
                             <a href="{{ route('profile.edit') }}" style="float: right;" class="btn btn-rounded btn-success mb-5"> Ubah Profil</a>
 
                             <h6 class="widget-user-desc">{{ $user->email }}</h6>
-                            <h6 class="widget-user-desc">{{ $user->usertype }}</h6>
+                            <h6 class="widget-user-desc">{{ $user->role }}</h6>
                         </div>
                         <div class="widget-user-image">
                             <img class="rounded-circle" src="{{ (!empty($user->image))? url('upload/user_images/'.$user->image):url('upload/no_image.jpg') }}" alt="User Avatar">

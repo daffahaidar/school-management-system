@@ -68,6 +68,7 @@
 | **10 August 2022** | Refactoring and Remodeling Users Database   |
 | **11 August 2022** | Implement Role Access Authentication        |
 | **12 August 2022** | Implement Random Generate User Id           |
+| **13 August 2022** | Create Student Registration Form Stage 1    |
 | **Next...**        | coming soon...                              |
 
 ## Installation

@@ -143,4 +143,5 @@ Route::prefix('administrations')->group(function () {
 Route::prefix('students')->group(function () {
 
     Route::get('/registration/view', [StudentRegistrationController::class, 'StudentRegistrationView'])->name('student.registration.view');
+    Route::get('/registration/add', [StudentRegistrationController::class, 'StudentRegistrationAdd'])->name('student.registration.add');
 });

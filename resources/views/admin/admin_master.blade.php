@@ -7,7 +7,7 @@ $date = date('H');
 $greeting = "";
 
 
-if ($date >= 3 && $date < 12){ $greeting="Selamat Pagi, " . $name; }else if ($date>= 12 && $date <= 15){ $greeting="Selamat Siang, " . $name; }else if ($date> 15 && $date < 18){ $greeting="Selamat Sore, " . $name; }else{ $greeting="Selamat Malam, " . $name; }@endphp <!-- end logic -->
+if ($date >= 3 && $date < 12) { $greeting="Selamat Pagi, " . $name; $icon="fa fa-solid fa-cloud-sun" ; }else if ($date>= 12 && $date <= 15) { $greeting="Selamat Siang, " . $name; $icon="fa fa-solid fa-sun" ; }else if ($date> 15 && $date < 18) { $greeting="Selamat Sore, " . $name; $icon="fa fa-solid fa-cloud-moon" ; }else { $greeting="Selamat Malam, " . $name; $icon="fa fa-solid fa-moon" ; } @endphp <!-- end logic -->
 
             <!DOCTYPE html>
             <html lang="en">

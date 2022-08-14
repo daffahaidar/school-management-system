@@ -29,11 +29,13 @@ $route = Route::current()->getName();
                     <span>Beranda</span>
                 </a>
             </li>
+
+            <li class="header nav-small-cap">Pengguna</li>
             @if(Auth::user()->role == 'Admin')
             <li class="treeview {{ ($prefix == '/users')?'active':'' }}">
                 <a href="#">
                     <i class="fa fa-light fa-users"></i>
-                    <span>Kelola Pengguna</span>
+                    <span>Manajemen Pengguna</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-right pull-right"></i>
                     </span>
@@ -58,6 +60,7 @@ $route = Route::current()->getName();
                 </ul>
             </li>
 
+            <li class="header nav-small-cap">Kesiswaan</li>
             <li class="treeview {{ ($prefix == '/administrations')?'active':'' }}">
                 <a href="#">
                     <i class="fa fa-solid fa-book"></i><span>Administrasi</span>
@@ -81,7 +84,8 @@ $route = Route::current()->getName();
 
             <li class="treeview {{ ($prefix == '/students')?'active':'' }}">
                 <a href="#">
-                    <i class="fa fa-solid fa-graduation-cap"></i><span>Manajemen Siswa</span>
+                    <i class="fa fa-solid fa-graduation-cap"></i>
+                    <span>Manajemen Siswa</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-right pull-right"></i>
                     </span>
@@ -93,12 +97,12 @@ $route = Route::current()->getName();
 
 
 
-            <li class="header nav-small-cap">User Interface</li>
+            <li class="header nav-small-cap">Kepegawaian</li>
 
             <li class="treeview">
                 <a href="#">
-                    <i data-feather="settings"></i>
-                    <span>Components</span>
+                    <i class="fa fa-solid fa-users-gear"></i>
+                    <span>Manajemen Pegawai</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-right pull-right"></i>
                     </span>

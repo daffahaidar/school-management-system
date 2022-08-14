@@ -69,6 +69,7 @@
 | **11 August 2022** | Implement Role Access Authentication        |
 | **12 August 2022** | Implement Random Generate User Id           |
 | **13 August 2022** | Create Student Registration Form Stage 1    |
+| **14 August 2022** | Create Student Registration Form Stage 2    |
 | **Next...**        | coming soon...                              |
 
 ## Installation

@@ -10,6 +10,8 @@ use App\Models\StudentClass;
 use App\Models\StudentGroup;
 use App\Models\StudentShift;
 use App\Models\StudentYear;
+use App\Models\User;
+use Illuminate\Support\Facades\DB;
 
 class StudentRegistrationController extends Controller
 {
@@ -36,5 +38,56 @@ class StudentRegistrationController extends Controller
 
     public function StudentRegistrationStore(Request $request)
     {
+        DB::transaction(function () use ($request) {
+            $checkYear = StudentYear::find($request->year_id)->name;
+            $student = User::where('usertype', 'Student')->orderBy('id', 'DESC')->first();
+
+            if ($student === null) {
+                $firstRegister = 0;
+                $studentId = $firstRegister + 1;
+
+                if ($studentId < 10) {
+                    $id_no = '000' . $studentId;
+                } elseif ($studentId < 100) {
+                    $id_no = '00' . $studentId;
+                } else if ($studentId < 1000) {
+                    $id_no = '0' . $studentId;
+                }
+            } else {
+                $student = User::where('usertype', 'Student')->orderBy('id', 'DESC')->first()->id;
+                $studentId = $student + 1;
+                if ($studentId < 10) {
+                    $id_no = '000' . $studentId;
+                } elseif ($studentId < 100) {
+                    $id_no = '00' . $studentId;
+                } else if ($studentId < 1000) {
+                    $id_no = '0' . $studentId;
+                }
+            }
+
+            $final_id_no = $checkYear . $id_no;
+            $user = new User();
+            $code = rand(0000, 9999);
+            $user->id_no = $final_id_no;
+            $user->password = bcrypt($code);
+            $user->usertype = 'Student';
+            $user->code = $code;
+            $user->name = $request->name;
+            $user->father = $request->father;
+            $user->mother = $request->mother;
+            $user->mobile = $request->mobile;
+            $user->address = $request->address;
+            $user->gender = $request->gender;
+            $user->religion = $request->religion;
+            $user->birth = date('d-m-Y', strtotime($request->birth));
+            if ($request->file('image')) {
+                $file = $request->file('image');
+                $filename = date('YmdHi') . $file->getClientOriginalName();
+                $file->move(public_path('upload/student_images'), $filename);
+                $user['image'] = $filename;
+            }
+
+            $user->save();
+        });
     }
 }

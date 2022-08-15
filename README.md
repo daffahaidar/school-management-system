@@ -70,6 +70,7 @@
 | **12 August 2022** | Implement Random Generate User Id           |
 | **13 August 2022** | Create Student Registration Form Stage 1    |
 | **14 August 2022** | Create Student Registration Form Stage 2    |
+| **15 August 2022** | Create Student Registration Form Stage 3    |
 | **Next...**        | coming soon...                              |
 
 ## Installation

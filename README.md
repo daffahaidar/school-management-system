@@ -72,6 +72,7 @@
 | **14 August 2022** | Create Student Registration Form Stage 2    |
 | **15 August 2022** | Create Student Registration Form Stage 3    |
 | **16 August 2022** | Completed Student Registration Form         |
+| **17 August 2022** | Filtering Student Data Stage 1              |
 | **Next...**        | coming soon...                              |
 
 ## Installation

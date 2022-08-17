@@ -10,7 +10,8 @@
             <!-- Basic Forms -->
             <div class="box">
                 <div class="box-header with-border">
-                    <h4 class="box-title">Tambahkan Pengguna</h4>
+                    <h3 class="box-title">Tambahkan Pengguna</h3>
+                    <a href="{{ route('user.view') }}" style="float: right;" class="btn btn-rounded btn-primary mb-5"> Kembali</a>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">

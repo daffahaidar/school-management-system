@@ -26,7 +26,9 @@
                                                         <option value="" selected="" disabled="">Pilih Tahun
                                                         </option>
                                                         @foreach ($years as $year)
-                                                            <option value="{{ $year->id }}">{{ $year->name }}</option>
+                                                            <option value="{{ $year->id }}"
+                                                                {{ @$year_id == $year_id ? 'selected' : '' }}>
+                                                                {{ $year->name }}</option>
                                                         @endforeach
                                                     </select>
                                                 </div>
@@ -41,7 +43,9 @@
                                                         <option value="" selected="" disabled="">Pilih Kelas
                                                         </option>
                                                         @foreach ($classes as $class)
-                                                            <option value="{{ $class->id }}">{{ $class->name }}</option>
+                                                            <option value="{{ $class->id }}"
+                                                                {{ @$class_id == $class_id ? 'selected' : '' }}>
+                                                                {{ $class->name }}</option>
                                                         @endforeach
                                                     </select>
                                                 </div>
@@ -72,7 +76,14 @@
                                             <tr>
                                                 <th width="5%">No.</th>
                                                 <th>Nama</th>
-                                                <th>Nomor ID</th>
+                                                <th>NIS</th>
+                                                <th>Roll</th>
+                                                <th>Tahun</th>
+                                                <th>Kelas</th>
+                                                <th>Foto</th>
+                                                @if (Auth::user()->role == 'Admin')
+                                                    <th>Kode</th>
+                                                @endif
                                                 <th width="25%">Tindakan</th>
 
                                             </tr>
@@ -81,7 +92,14 @@
                                             @foreach ($allData as $key => $value)
                                                 <tr>
                                                     <td>{{ $key + 1 }}</td>
-                                                    <td>{{ $value->class_id }}</td>
+                                                    <td>{{ $value['student']['name'] }}</td>
+                                                    <td>{{ $value['student']['id_no'] }}</td>
+                                                    <td>{{ $value->roll }}</td>
+                                                    <td>{{ $value['student_year']['name'] }}</td>
+                                                    <td>{{ $value['student_class']['name'] }}</td>
+                                                    <td><img src="{{ !empty($value['student']['image']) ? url('upload/student_images/' . $value['student']['image']) : url('upload/no_image.jpg') }}"
+                                                            style="width: 60px; height: 80px; border: 2px solid #7A15F7; border-radius: 5px;">
+                                                    </td>
                                                     <td>{{ $value->year_id }}</td>
                                                     <td>
                                                         <a href="" class="btn btn-info">Ubah</a>

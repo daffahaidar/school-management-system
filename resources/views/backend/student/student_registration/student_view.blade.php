@@ -16,7 +16,7 @@
                             </div>
 
                             <div class="box-body">
-                                <form action="" method="">
+                                <form method="GET" action="{{ route('student.year.class.wise') }}">
                                     <div class="row">
                                         <div class="col-md-4">
                                             <div class="form-group">
@@ -27,7 +27,7 @@
                                                         </option>
                                                         @foreach ($years as $year)
                                                             <option value="{{ $year->id }}"
-                                                                {{ @$year_id == $year_id ? 'selected' : '' }}>
+                                                                {{ @$year_id == $year->id ? 'selected' : '' }}>
                                                                 {{ $year->name }}</option>
                                                         @endforeach
                                                     </select>
@@ -44,7 +44,7 @@
                                                         </option>
                                                         @foreach ($classes as $class)
                                                             <option value="{{ $class->id }}"
-                                                                {{ @$class_id == $class_id ? 'selected' : '' }}>
+                                                                {{ @$class_id == $class->id ? 'selected' : '' }}>
                                                                 {{ $class->name }}</option>
                                                         @endforeach
                                                     </select>
@@ -69,51 +69,102 @@
                             </div>
 
                             <!-- /.box-header -->
+
                             <div class="box-body">
+
                                 <div class="table-responsive">
-                                    <table id="example1" class="table table-bordered table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th width="5%">No.</th>
-                                                <th>Nama</th>
-                                                <th>NIS</th>
-                                                <th>Roll</th>
-                                                <th>Tahun</th>
-                                                <th>Kelas</th>
-                                                <th>Foto</th>
-                                                @if (Auth::user()->role == 'Admin')
-                                                    <th>Kode</th>
-                                                @endif
-                                                <th width="25%">Tindakan</th>
 
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            @foreach ($allData as $key => $value)
+                                    @if (!isset($search))
+                                        <table id="example1" class="table table-bordered table-striped">
+                                            <thead>
                                                 <tr>
-                                                    <td>{{ $key + 1 }}</td>
-                                                    <td>{{ $value['student']['name'] }}</td>
-                                                    <td>{{ $value['student']['id_no'] }}</td>
-                                                    <td>{{ $value->roll }}</td>
-                                                    <td>{{ $value['student_year']['name'] }}</td>
-                                                    <td>{{ $value['student_class']['name'] }}</td>
-                                                    <td><img src="{{ !empty($value['student']['image']) ? url('upload/student_images/' . $value['student']['image']) : url('upload/no_image.jpg') }}"
-                                                            style="width: 60px; height: 80px; border: 2px solid #7A15F7; border-radius: 5px;">
-                                                    </td>
-                                                    <td>{{ $value->year_id }}</td>
-                                                    <td>
-                                                        <a href="" class="btn btn-info">Ubah</a>
-                                                        <a href="" class="btn btn-danger" id="delete">Hapus</a>
+                                                    <th width="5%">No.</th>
+                                                    <th>Nama</th>
+                                                    <th>NIS</th>
+                                                    <th>Roll</th>
+                                                    <th>Tahun</th>
+                                                    <th>Kelas</th>
+                                                    <th>Foto</th>
+                                                    @if (Auth::user()->role == 'Admin')
+                                                        <th>Kode</th>
+                                                    @endif
+                                                    <th width="25%">Tindakan</th>
 
-                                                    </td>
                                                 </tr>
-                                            @endforeach
+                                            </thead>
+                                            <tbody>
+                                                @foreach ($allData as $key => $value)
+                                                    <tr>
+                                                        <td>{{ $key + 1 }}</td>
+                                                        <td>{{ $value['student']['name'] }}</td>
+                                                        <td>{{ $value['student']['id_no'] }}</td>
+                                                        <td>{{ $value->roll }}</td>
+                                                        <td>{{ $value['student_year']['name'] }}</td>
+                                                        <td>{{ $value['student_class']['name'] }}</td>
+                                                        <td><img src="{{ !empty($value['student']['image']) ? url('upload/student_images/' . $value['student']['image']) : url('upload/no_image.jpg') }}"
+                                                                style="width: 60px; height: 8z0px; border: 2px solid #7A15F7; border-radius: 5px;">
+                                                        </td>
+                                                        <td>{{ $value->year_id }}</td>
+                                                        <td>
+                                                            <a href="" class="btn btn-info">Ubah</a>
+                                                            <a href="" class="btn btn-danger"
+                                                                id="delete">Hapus</a>
 
-                                        </tbody>
-                                        <tfoot>
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
 
-                                        </tfoot>
-                                    </table>
+                                            </tbody>
+                                            <tfoot>
+
+                                            </tfoot>
+                                        </table>
+                                    @else
+                                        <table id="example1" class="table table-bordered table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th width="5%">No.</th>
+                                                    <th>Nama</th>
+                                                    <th>NIS</th>
+                                                    <th>Roll</th>
+                                                    <th>Tahun</th>
+                                                    <th>Kelas</th>
+                                                    <th>Foto</th>
+                                                    @if (Auth::user()->role == 'Admin')
+                                                        <th>Kode</th>
+                                                    @endif
+                                                    <th width="25%">Tindakan</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach ($allData as $key => $value)
+                                                    <tr>
+                                                        <td>{{ $key + 1 }}</td>
+                                                        <td>{{ $value['student']['name'] }}</td>
+                                                        <td>{{ $value['student']['id_no'] }}</td>
+                                                        <td>{{ $value->roll }}</td>
+                                                        <td>{{ $value['student_year']['name'] }}</td>
+                                                        <td>{{ $value['student_class']['name'] }}</td>
+                                                        <td><img src="{{ !empty($value['student']['image']) ? url('upload/student_images/' . $value['student']['image']) : url('upload/no_image.jpg') }}"
+                                                                style="width: 60px; height: 8z0px; border: 2px solid #7A15F7; border-radius: 5px;">
+                                                        </td>
+                                                        <td>{{ $value->year_id }}</td>
+                                                        <td>
+                                                            <a href="" class="btn btn-info">Ubah</a>
+                                                            <a href="" class="btn btn-danger"
+                                                                id="delete">Hapus</a>
+
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
+
+                                            </tbody>
+                                            <tfoot>
+
+                                            </tfoot>
+                                        </table>
+                                    @endif
                                 </div>
                             </div>
                             <!-- /.box-body -->

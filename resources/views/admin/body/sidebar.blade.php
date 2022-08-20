@@ -13,7 +13,7 @@ $route = Route::current()->getName();
                 <a href="{{ route('dashboard') }}">
                     <!-- logo for regular state and mobile devices -->
                     <div class="d-flex align-items-center justify-content-center">
-                        <img src="{{asset('backend/images/logo-dark.png')}}" alt="Logo">
+                        <img src="{{ asset('backend/images/logo-dark.png') }}" alt="Logo">
                         <h3><b>My</b> School</h3>
                     </div>
                 </a>
@@ -23,7 +23,7 @@ $route = Route::current()->getName();
         <!-- sidebar menu-->
         <ul class="sidebar-menu" data-widget="tree">
 
-            <li class="{{ ($route == 'dashboard')?'active':'' }}">
+            <li class="{{ $route == 'dashboard' ? 'active' : '' }}">
                 <a href="{{ route('dashboard') }}">
                     <i data-feather="grid"></i>
                     <span>Beranda</span>
@@ -31,22 +31,22 @@ $route = Route::current()->getName();
             </li>
 
             <li class="header nav-small-cap">Pengguna</li>
-            @if(Auth::user()->role == 'Admin')
-            <li class="treeview {{ ($prefix == '/users')?'active':'' }}">
-                <a href="#">
-                    <i class="fa fa-light fa-users"></i>
-                    <span>Manajemen Pengguna</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-right pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a href="{{ route('user.view') }}"><i class="ti-more"></i>Lihat Pengguna</a></li>
-                </ul>
-            </li>
+            @if (Auth::user()->role == 'Admin')
+                <li class="treeview {{ $prefix == '/users' ? 'active' : '' }}">
+                    <a href="#">
+                        <i class="fa fa-light fa-users"></i>
+                        <span>Manajemen Pengguna</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-right pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{ route('user.view') }}"><i class="ti-more"></i>Lihat Pengguna</a></li>
+                    </ul>
+                </li>
             @endif
 
-            <li class="treeview {{ ($prefix == '/profile')?'active':'' }}">
+            <li class="treeview {{ $prefix == '/profile' ? 'active' : '' }}">
                 <a href="#">
                     <i class="fa fa-solid fa-user"></i> <span>Kelola Profil</span>
                     <span class="pull-right-container">
@@ -60,7 +60,7 @@ $route = Route::current()->getName();
             </li>
 
             <li class="header nav-small-cap">Kesiswaan</li>
-            <li class="treeview {{ ($prefix == '/administrations')?'active':'' }}">
+            <li class="treeview {{ $prefix == '/administrations' ? 'active' : '' }}">
                 <a href="#">
                     <i class="fa fa-solid fa-book"></i><span>Administrasi</span>
                     <span class="pull-right-container">
@@ -81,7 +81,7 @@ $route = Route::current()->getName();
                 </ul>
             </li>
 
-            <li class="treeview {{ ($prefix == '/students')?'active':'' }}">
+            <li class="treeview {{ $prefix == '/students' ? 'active' : '' }}">
                 <a href="#">
                     <i class="fa fa-solid fa-graduation-cap"></i>
                     <span>Manajemen Siswa</span>
@@ -90,7 +90,8 @@ $route = Route::current()->getName();
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ route('student.registration.view') }}"><i class="ti-more"></i>Pendaftaran Siswa</a></li>
+                    <li><a href="{{ route('student.registration.view') }}"><i class="ti-more"></i>Pendaftaran Siswa</a>
+                    </li>
                 </ul>
             </li>
 
@@ -122,10 +123,13 @@ $route = Route::current()->getName();
 
     <div class="sidebar-footer">
         <!-- item-->
-        <a href="javascript:void(0)" class="link" data-toggle="tooltip" title="" data-original-title="Settings" aria-describedby="tooltip92529"><i class="ti-settings"></i></a>
+        <a href="javascript:void(0)" class="link" data-toggle="tooltip" title="" data-original-title="Settings"
+            aria-describedby="tooltip92529"><i class="ti-settings"></i></a>
         <!-- item-->
-        <a href="mailbox_inbox.html" class="link" data-toggle="tooltip" title="" data-original-title="Email"><i class="ti-email"></i></a>
+        <a href="mailbox_inbox.html" class="link" data-toggle="tooltip" title="" data-original-title="Email"><i
+                class="ti-email"></i></a>
         <!-- item-->
-        <a href="javascript:void(0)" class="link" data-toggle="tooltip" title="" data-original-title="Logout"><i class="ti-lock"></i></a>
+        <a href="javascript:void(0)" class="link" data-toggle="tooltip" title="" data-original-title="Logout"><i
+                class="ti-lock"></i></a>
     </div>
 </aside>

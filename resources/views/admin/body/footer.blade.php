@@ -1,8 +1,8 @@
 <?php
-$label = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+$label = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
 $month = $label[date('n') - 1];
-$year  = date('Y');
-$date  = date('d');
+$year = date('Y');
+$date = date('d');
 ?>
 
 <footer class="main-footer">
@@ -17,8 +17,8 @@ $date  = date('d');
             </li>
         </ul> -->
         <!-- print date - month - year in p -->
-        <p>{{ ($date." ".$month." ".$year) }} </p>
+        <p>{{ $date . ' ' . $month . ' ' . $year }} </p>
     </div>
-    <div>&copy; 2020 - {{$year}}<a href="#"> My School</a> | All Rights Reserved.</div>
+    <div>&copy; 2020 - {{ $year }}<a href="#"> My School</a> | All Rights Reserved.</div>
 
 </footer>

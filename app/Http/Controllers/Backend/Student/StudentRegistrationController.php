@@ -131,4 +131,15 @@ class StudentRegistrationController extends Controller
 
         return redirect()->route('student.registration.view')->with($notification);
     }
+
+    public function StudentRegistrationEdit($student_id)
+    {
+        $data['years'] = StudentYear::all();
+        $data['classes'] = StudentClass::all();
+        $data['groups'] = StudentGroup::all();
+        $data['shifts'] = StudentShift::all();
+
+        $data['editData'] = AssignStudent::with(['student', 'discount'])->where('student_id', $student_id)->first();
+        return view('backend.student.student_registration.student_edit', $data);
+    }
 }

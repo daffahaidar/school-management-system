@@ -142,4 +142,50 @@ class StudentRegistrationController extends Controller
         $data['editData'] = AssignStudent::with(['student', 'discount'])->where('student_id', $student_id)->first();
         return view('backend.student.student_registration.student_edit', $data);
     }
+
+    public function StudentRegistrationUpdate(Request $request, $student_id)
+    {
+        DB::transaction(function () use ($request, $student_id) {
+
+
+            $user = User::where('id', $student_id)->first();
+            $user->name = $request->name;
+            $user->father = $request->father;
+            $user->mother = $request->mother;
+            $user->mobile = $request->mobile;
+            $user->address = $request->address;
+            $user->gender = $request->gender;
+            $user->religion = $request->religion;
+            $user->birth = date('Y-m-d', strtotime($request->birth));
+
+            if ($request->file('image')) {
+                $file = $request->file('image');
+                @unlink(public_path('upload/student_images/' . $user->image));
+                $filename = date('YmdHi') . $file->getClientOriginalName();
+                $file->move(public_path('upload/student_images'), $filename);
+                $user['image'] = $filename;
+            }
+
+            $user->save();
+
+            $assign_student = AssignStudent::where('id', $request->id)->where('student_id', $student_id)->first();
+            $assign_student->year_id = $request->year_id;
+            $assign_student->class_id = $request->class_id;
+            $assign_student->group_id = $request->group_id;
+            $assign_student->shift_id = $request->shift_id;
+
+            $assign_student->save();
+
+            $discount_student = DiscountStudent::where('assign_student_id', $request->id)->first();
+            $discount_student->discount = $request->discount;
+            $discount_student->save();
+        });
+
+        $notification = array(
+            'message' => 'Data Siswa Berhasil Diubah!',
+            'alert-type' => 'success',
+        );
+
+        return redirect()->route('student.registration.view')->with($notification);
+    }
 }

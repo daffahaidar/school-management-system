@@ -78,6 +78,7 @@
 | **20 August 2022** | Completed Filtering Student Data            |
 | **21 August 2022** | Edit Student Data Stage 1                   |
 | **22 August 2022** | Edit Student Data Stage 2                   |
+| **23 August 2022** | Completed Edit Student Data                 |
 | **Next...**        | coming soon...                              |
 
 ## Installation

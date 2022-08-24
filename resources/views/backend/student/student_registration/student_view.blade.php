@@ -108,8 +108,8 @@
                                                         <td>
                                                             <a href="{{ route('student.registration.edit', $value->student_id) }}"
                                                                 class="btn btn-info">Ubah</a>
-                                                            <a href="" class="btn btn-danger"
-                                                                id="delete">Hapus</a>
+                                                            <a href="{{ route('student.registration.promotion', $value->student_id) }}"
+                                                                class="btn btn-warning">Naik Kelas</a>
 
                                                         </td>
                                                     </tr>
@@ -154,8 +154,8 @@
                                                         <td>
                                                             <a href="{{ route('student.registration.edit', $value->student_id) }}"
                                                                 class="btn btn-info">Ubah</a>
-                                                            <a href="" class="btn btn-danger"
-                                                                id="delete">Hapus</a>
+                                                            <a href="{{ route('student.registration.promotion', $value->student_id) }}"
+                                                                class="btn btn-warning">Naik Kelas</a>
 
                                                         </td>
                                                     </tr>

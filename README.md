@@ -79,6 +79,7 @@
 | **21 August 2022** | Edit Student Data Stage 1                   |
 | **22 August 2022** | Edit Student Data Stage 2                   |
 | **23 August 2022** | Completed Edit Student Data                 |
+| **24 August 2022** | Create Student Promotion Feature            |
 | **Next...**        | coming soon...                              |
 
 ## Installation

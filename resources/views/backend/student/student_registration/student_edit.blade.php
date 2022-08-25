@@ -248,6 +248,8 @@
                                                             <img id="showImage"
                                                                 src="{{ !empty($editData['student']['image']) ? url('upload/student_images/' . $editData['student']['image']) : url('upload/no_image.jpg') }}"
                                                                 style="width: 100px; height: 130px; border: 2px solid #7A15F7; border-radius: 5px;">
+                                                            <a href="{{ route('student.registration.promotion', $editData->student_id) }}"
+                                                                class="btn btn-success ml-10">Naik Kelas</a>
                                                         </div>
                                                     </div>
                                                 </div>

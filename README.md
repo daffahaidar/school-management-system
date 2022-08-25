@@ -80,6 +80,7 @@
 | **22 August 2022** | Edit Student Data Stage 2                   |
 | **23 August 2022** | Completed Edit Student Data                 |
 | **24 August 2022** | Create Student Promotion Feature            |
+| **25 August 2022** | Convert Student Data to PDF Stage 1         |
 | **Next...**        | coming soon...                              |
 
 ## Installation

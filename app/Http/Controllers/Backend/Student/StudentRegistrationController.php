@@ -234,11 +234,10 @@ class StudentRegistrationController extends Controller
     public function StudentRegistrationDetails($student_id)
     {
         $data['details'] = AssignStudent::with(['student', 'discount'])->where('student_id', $student_id)->first();
+        $pdf = PDF::loadView('backend.student.student_registration.student_details_pdf', $data);
+        $student_name = $data['details']->student->name;
+        $student_id = $data['details']->student->id_no;
 
-        // $pdf = PDF::loadView('backend.student.student_registration.student_details_pdf', $data);
-        // $pdf->SetProtection(['copy', 'print'], '', 'pass');
-        // return $pdf->stream('document.pdf');
-
-        return view('backend.student.student_registration.student_details_pdf', $data);
+        return $pdf->download($student_id . ' - ' . $student_name . '.pdf');
     }
 }

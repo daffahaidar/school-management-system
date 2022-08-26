@@ -110,7 +110,8 @@
                                                                 class="btn btn-info"><i
                                                                     class="fa fa-solid fa-user-pen"></i></a>
 
-                                                            <a href="{{ route('student.registration.promotion', $value->student_id) }}"
+                                                            <a target="_blank"
+                                                                href="{{ route('student.registration.details', $value->student_id) }}"
                                                                 class="btn btn-primary"><i
                                                                     class="fa fa-solid fa-file-pdf"></i></a>
 
@@ -159,7 +160,8 @@
                                                                 class="btn btn-info"><i
                                                                     class="fa fa-solid fa-user-pen"></i></a>
 
-                                                            <a href="{{ route('student.registration.promotion', $value->student_id) }}"
+                                                            <a target="_blank"
+                                                                href="{{ route('student.registration.details', $value->student_id) }}"
                                                                 class="btn btn-primary"><i
                                                                     class="fa fa-solid fa-file-pdf"></i></a>
 

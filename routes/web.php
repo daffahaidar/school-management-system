@@ -150,4 +150,5 @@ Route::prefix('students')->group(function () {
     Route::post('/registration/update/{student_id}', [StudentRegistrationController::class, 'StudentRegistrationUpdate'])->name('update.student.registration');
     Route::get('/registration/promotion/{student_id}', [StudentRegistrationController::class, 'StudentRegistrationPromotion'])->name('student.registration.promotion');
     Route::post('/registration/update/promotion/{student_id}', [StudentRegistrationController::class, 'StudentUpdatePromotion'])->name('promotion.student.registration');
+    Route::get('/registration/details/{student_id}', [StudentRegistrationController::class, 'StudentRegistrationDetails'])->name('student.registration.details');
 });

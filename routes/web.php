@@ -16,6 +16,7 @@ use App\Http\Controllers\Backend\Setup\SchoolSubjectController;
 use App\Http\Controllers\Backend\Setup\AssignSubjectController;
 use App\Http\Controllers\Backend\Setup\DesignationController;
 use App\Http\Controllers\Backend\Student\StudentRegistrationController;
+use App\Http\Controllers\Backend\Student\StudentRollController;
 
 /*
 |--------------------------------------------------------------------------
@@ -151,4 +152,6 @@ Route::prefix('students')->group(function () {
     Route::get('/registration/promotion/{student_id}', [StudentRegistrationController::class, 'StudentRegistrationPromotion'])->name('student.registration.promotion');
     Route::post('/registration/update/promotion/{student_id}', [StudentRegistrationController::class, 'StudentUpdatePromotion'])->name('promotion.student.registration');
     Route::get('/registration/details/{student_id}', [StudentRegistrationController::class, 'StudentRegistrationDetails'])->name('student.registration.details');
+
+    Route::get('/roll/generate/view', [StudentRollController::class, 'StudentRollView'])->name('roll.generate.view');
 });

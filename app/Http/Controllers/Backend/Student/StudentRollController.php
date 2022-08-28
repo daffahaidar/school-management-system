@@ -27,4 +27,8 @@ class StudentRollController extends Controller
 
         return view('backend.student.roll_generate.roll_generate_view', $data);
     }
+
+    public function GetStudents()
+    {
+    }
 }

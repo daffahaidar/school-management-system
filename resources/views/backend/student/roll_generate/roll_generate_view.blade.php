@@ -18,7 +18,7 @@
                             </div>
 
                             <div class="box-body">
-                                <form method="GET" action="{{ route('student.year.class.wise') }}">
+                                <form method="post" action="{{ route('student.year.class.wise') }}">
                                     <div class="row">
                                         <div class="col-md-4">
                                             <div class="form-group">
@@ -114,7 +114,7 @@
                             '<input type="hidden" name="student_id[]" value="' + v.student_id +
                             '"></td>' +
                             '<td>' + v.student.name + '</td>' +
-                            '<td>' + v.student.fname + '</td>' +
+                            '<td>' + v.student.father + '</td>' +
                             '<td>' + v.student.gender + '</td>' +
                             '<td><input type="text" class="form-control form-control-sm" name="roll[]" value="' +
                             v.roll + '"></td>' +

@@ -85,6 +85,7 @@
 | **27 August 2022** | Completed Convert Student Data to PDF       |
 | **27 August 2022** | Create Student Roll Generate Stage 1        |
 | **28 August 2022** | Create Student Roll Generate Stage 2        |
+| **29 August 2022** | Create Student Roll Generate Stage 3        |
 | **Next...**        | coming soon...                              |
 
 ## Installation

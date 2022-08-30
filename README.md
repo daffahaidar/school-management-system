@@ -86,6 +86,7 @@
 | **27 August 2022** | Create Student Roll Generate Stage 1        |
 | **28 August 2022** | Create Student Roll Generate Stage 2        |
 | **29 August 2022** | Create Student Roll Generate Stage 3        |
+| **30 August 2022** | Completed Student Roll Generate             |
 | **Next...**        | coming soon...                              |
 
 ## Installation

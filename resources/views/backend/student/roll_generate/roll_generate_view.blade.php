@@ -18,7 +18,8 @@
                             </div>
 
                             <div class="box-body">
-                                <form method="post" action="{{ route('student.year.class.wise') }}">
+                                <form method="post" action="{{ route('roll.generate.store') }}">
+                                    @csrf
                                     <div class="row">
                                         <div class="col-md-4">
                                             <div class="form-group">

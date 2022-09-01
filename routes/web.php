@@ -159,4 +159,6 @@ Route::prefix('students')->group(function () {
     Route::post('/roll/generate', [StudentRollController::class, 'StudentRollStore'])->name('roll.generate.store');
 
     Route::get('/registration/fee/view', [RegistrationFeeController::class, 'RegistrationFeeView'])->name('registration.fee.view');
+    Route::get('/reg/fee/classwisedata', [RegistrationFeeController::class, 'RegFeeClassData'])->name('student.registration.fee.classwise.get');
+    Route::get('/reg/fee/payslip', [RegistrationFeeController::class, 'RegFeePayslip'])->name('student.registration.fee.payslip');
 });

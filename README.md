@@ -4,6 +4,7 @@
 
 ## Notes
 
+-   Thanks to Kazi Ariyan who is the owner of the course from easylearning.bd who has guided and helped in making this project
 -   If you want to take the source code or clone this repository, please follow my github or star this repository to support and encourage me
 -   All content in this school management system application is written in Indonesian, but you can change it to a language you understand
 -   Sorry for my bad english, I am learning a lot of new things everyday and I am still learning how to write in english.

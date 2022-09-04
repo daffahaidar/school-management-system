@@ -143,3 +143,4 @@ php artisan serve
 ## Authors
 
 -   [@daffahaidar](https://www.github.com/daffahaidar)
+-   [@easylearningbd](https://www.github.com/easylearningbd)

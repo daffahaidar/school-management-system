@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('fee_category_amounts', function (Blueprint $table) {
             $table->id();
-            $table->integer('fee_category_id');
-            $table->integer('class_id');
-            $table->double('amount');
+            $table->integer('fee_category_id')->nullable();
+            $table->integer('class_id')->nullable();
+            $table->double('amount')->nullable();
             $table->timestamps();
         });
     }

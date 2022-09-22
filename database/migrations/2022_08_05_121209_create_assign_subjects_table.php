@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('assign_subjects', function (Blueprint $table) {
             $table->id();
-            $table->integer('class_id');
-            $table->integer('subject_id');
-            $table->double('full_mark');
-            $table->double('pass_mark');
-            $table->double('subjective_mark');
+            $table->integer('class_id')->nullable();
+            $table->integer('subject_id')->nullable();
+            $table->double('full_mark')->nullable();
+            $table->double('pass_mark')->nullable();
+            $table->double('subjective_mark')->nullable();
             $table->timestamps();
         });
     }
